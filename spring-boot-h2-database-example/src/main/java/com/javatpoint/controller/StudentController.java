@@ -22,6 +22,12 @@ private List<Student> getAllStudent()
 {
 return studentService.getAllStudent();
 }
+
+@GetMapping("/saveAllStudent")
+private List<Student> saveAllStudent() 
+{
+return studentService.getAllStudent();
+}
 //creating a get mapping that retrieves the detail of a specific student
 @GetMapping("/student/{id}")
 private Student getStudent(@PathVariable("id") int id) 
