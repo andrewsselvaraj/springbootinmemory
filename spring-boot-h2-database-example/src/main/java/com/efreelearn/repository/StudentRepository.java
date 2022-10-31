@@ -1,6 +1,7 @@
-package com.javatpoint.repository;
+package com.efreelearn.repository;
 import org.springframework.data.repository.CrudRepository;
-import com.javatpoint.model.Student;
+
+import com.efreelearn.model.Student;
 public interface StudentRepository extends CrudRepository<Student, Integer>
 {
 }
