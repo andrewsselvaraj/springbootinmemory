@@ -40,6 +40,11 @@ private List<Student> findByName(@PathVariable("namep") String name)
 {
 return studentService.findByName(name);
 }
+@GetMapping("/findbynameandage/{namep}/{age}")
+private List<Student> findByName(@PathVariable("namep") String name,@PathVariable("age") int age) 
+{
+return studentService.findByNameaAndAge(name,age);
+}
 //creating a get mapping that retrieves the detail of a specific student
 @GetMapping("/student/{id}")
 private Student getStudent(@PathVariable("id") int id) 

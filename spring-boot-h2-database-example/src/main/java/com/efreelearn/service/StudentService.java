@@ -46,7 +46,16 @@ s2.setId(1212121);
 s2.setAge(121);
 s2.setEmail("asd@yahoo.com");
 s2.setName("name222");
-students.add(s1);
+students.add(s2);
+
+
+Student s23 = new Student();
+s23.setId(1212121);
+s23.setAge(121);
+s23.setEmail("asd@yahoo.com");
+s23.setName("name222");
+students.add(s23);
+
 studentRepository.saveAll(students);
 
 return students;
@@ -69,5 +78,9 @@ studentRepository.save(student);
 public void delete(int id) 
 {
 studentRepository.deleteById(id);
+}
+public List<Student> findByNameaAndAge(String name,int age) {
+	// TODO Auto-generated method stub
+	  return studentRepository.findByNameAndAge(name, age);
 }
 }
