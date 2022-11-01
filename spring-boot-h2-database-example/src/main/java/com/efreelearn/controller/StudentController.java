@@ -27,7 +27,18 @@ return studentService.getAllStudent();
 @GetMapping("/saveAllStudent")
 private List<Student> saveAllStudent() 
 {
-return studentService.getAllStudent();
+return studentService.saveAllStudent();
+}
+
+@GetMapping("/orderbyage")
+private List<Student> orderByAge() 
+{
+return studentService.saveAllStudent();
+}
+@GetMapping("/findbyname/{namep}")
+private List<Student> findByName(@PathVariable("namep") String name) 
+{
+return studentService.findByName(name);
 }
 //creating a get mapping that retrieves the detail of a specific student
 @GetMapping("/student/{id}")

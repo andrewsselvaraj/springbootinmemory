@@ -1,5 +1,8 @@
 package com.efreelearn.service;
 import java.util.ArrayList;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,12 +39,27 @@ s1.setEmail("hey@yahoo.com");
 s1.setName("name2");
 students.add(s1);
 studentRepository.saveAll(students);
+
+
+Student s2 = new Student();
+s2.setId(1212121);
+s2.setAge(121);
+s2.setEmail("asd@yahoo.com");
+s2.setName("name222");
+students.add(s1);
+studentRepository.saveAll(students);
+
 return students;
 }
 //getting a specific record
 public Student getStudentById(int id) 
 {
 return studentRepository.findById(id).get();
+}
+//getting a specific record
+public  List<Student>  findByName(String name) 
+{
+return studentRepository.findByName(name);
 }
 public void saveOrUpdate(Student student) 
 {
