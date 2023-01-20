@@ -30,7 +30,7 @@ private String test()
 return "testSuccess";
 }
 
-@GetMapping("/")
+@GetMapping("/t")
 private String test1() 
 {
 return "testSuccess1";
