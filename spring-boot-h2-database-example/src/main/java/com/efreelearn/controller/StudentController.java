@@ -30,6 +30,12 @@ private String test()
 return "testSuccess";
 }
 
+@GetMapping("/")
+private String test1() 
+{
+return "testSuccess1";
+}
+
 @GetMapping("/saveAllStudent")
 private List<Student> saveAllStudent() 
 {
