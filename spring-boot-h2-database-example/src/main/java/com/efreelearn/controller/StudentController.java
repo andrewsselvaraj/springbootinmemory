@@ -24,6 +24,12 @@ private List<Student> getAllStudent()
 return studentService.getAllStudent();
 }
 
+@GetMapping("/")
+private String test() 
+{
+return "testSuccess";
+}
+
 @GetMapping("/saveAllStudent")
 private List<Student> saveAllStudent() 
 {
