@@ -11,8 +11,8 @@ stages {
         
                 stage('Build') {
             steps {
-                sh 'make' 
-                 
+               
+                 echo 'Build..'
             }
         }
 }
