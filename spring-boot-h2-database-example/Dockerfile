@@ -7,14 +7,16 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 # Refer to Maven build -> finalName
 ARG JAR_FILE=target/spring-boot-h2-database-example.jar
 
- cd /opt/app
+# cd /opt/app
 #WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/app.jar
-COPY ${JAR_FILE} app.jar
+#COPY ${JAR_FILE} app.jar
 
 # java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+#ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","target/spring-boot-h2-database-example.jar"]
+
 
 ## sudo docker run -p 8080:8080 -t docker-spring-boot:1.0
 ## sudo docker run -p 80:8080 -t docker-spring-boot:1.0
