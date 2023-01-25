@@ -8,7 +8,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 ARG JAR_FILE=target/spring-boot-h2-database-example.jar
 
 # cd /opt/app
-#WORKDIR /opt/app
+WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/app.jar
 COPY ${JAR_FILE} app.jar
