@@ -7,7 +7,7 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 # Refer to Maven build -> finalName
 ARG JAR_FILE=target/spring-boot-h2-database-example.jar
 
-# cd /opt/app
+ cd /opt/app
 #WORKDIR /opt/app
 
 # cp target/spring-boot-web.jar /opt/app/app.jar
