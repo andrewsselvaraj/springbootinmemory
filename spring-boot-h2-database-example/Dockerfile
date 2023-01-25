@@ -1,3 +1,5 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
-ENTRYPOINT ["java","-jar","target/spring-boot-h2-database-example-0.0.1-SNAPSHOT.jar"]
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
 
