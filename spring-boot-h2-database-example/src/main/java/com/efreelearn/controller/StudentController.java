@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.efreelearn.model.Student;
@@ -30,7 +31,7 @@ private String test()
 return "testSuccess";
 }
 
-@GetMapping("/t")
+@RequestMapping("/t")
 private String test1() 
 {
 return "testSuccess1";
