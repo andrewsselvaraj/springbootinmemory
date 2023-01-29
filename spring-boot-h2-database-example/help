@@ -7,26 +7,12 @@ sudo docker run -p 443:8443 -t sbmdb
 ## sudo docker run -p 80:8080 -t docker-spring-boot:1.0
 ## sudo docker run -p 443:8443 -t sbmdb
 ## mvn package
+#pull
+#andrewsselvaraj/dockerrepository:myfirstimagepush
 
-
-I had the same issue, but accepted answer given here did not work for me. I tried few steps and was able to get around to push it finally.
-
-Here are the steps worked for me:
-
-Login to the docker.
-
-docker login -u sirimalla
-
-Tag your image build
-
-my image name here is : mylocalimage and by default it has tag : latest
-and my username is : sirimalla as registered with docker cloud, and I created a public repository named : dockerhub
-
-so my personal repository becomes now : sirimalla/dockerhub and I want to push my image with tag : myfirstimagepush
-
-I tagged as below :
-
-docker tag mylocalimage:latest sirimalla/dockerhub:myfirstimagepush
+# push 
+docker tag sbmdb:latest andrewsselvaraj/dockerrepository:myfirstimagepush
 Pushed the image to my personal docker repository as below
+docker push andrewsselvaraj/dockerrepository:myfirstimagepush
 
-docker push sirimalla/dockerhub:myfirstimagepush
+
