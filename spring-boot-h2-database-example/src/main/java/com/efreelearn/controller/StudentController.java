@@ -77,4 +77,35 @@ private int saveStudent(@RequestBody Student student)
 studentService.saveOrUpdate(student);
 return student.getId();
 }
+@PostMapping("/loginrequestbody")
+private Student loginRequestBody(@RequestBody Student student) 
+{
+	
+	if(student.getName().equalsIgnoreCase("andrews") || student.getName().equalsIgnoreCase("danny") || student.getName().equalsIgnoreCase("rajesh"))
+	{
+		student.setName("validuser");
+		return student;
+	}
+	else
+	{
+		student.setName("invaliduser");
+		return student;
+	}
+		
+}
+@GetMapping("/loginpathvariable/{username}/{password}")
+private Student loginPathVariable(@PathVariable("username") String username,@PathVariable("password") String password) 
+{
+	Student student = new Student();
+	if(username.equalsIgnoreCase("andrews") || username.equalsIgnoreCase("danny") ||username.equalsIgnoreCase("rajesh"))
+	{
+		student.setName("validuser");
+		return student;
+	}
+	else 
+	{
+		student.setName("invaliduser");
+		return student;
+	}
+}
 }
