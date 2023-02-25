@@ -13,7 +13,7 @@ import com.efreelearn.repository.StudentRepository;
 @Service
 public class StudentService 
 {
-@Autowired
+@org.springframework.beans.factory.annotation.Autowired(required=true)
 StudentRepository studentRepository;
 //getting all student records
 public List<Student> getAllStudent() 
