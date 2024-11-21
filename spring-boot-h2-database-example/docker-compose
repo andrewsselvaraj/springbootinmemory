@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    image: andrewsselvaraj/springbootinmemory
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1234:8080"
+    depends_on:
+      - db
+
